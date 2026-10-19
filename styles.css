@@ -1,0 +1,149 @@
+/* ==========================================
+   Variables de Paleta de Colores
+   ========================================== */
+:root {
+    --color-bg-dark: #040201;       /* Fondo general / bordes oscuros */
+    --color-surface: #381417;       /* Fondo de tarjetas / encabezado */
+    --color-primary: #620616;       /* Detalles y botones / acentos */
+    --color-accent: #8c0a22;        /* Enlaces, hovers y viñetas */
+    --color-text: #f0ece7;          /* Color de texto claro principal */
+}
+
+/* ==========================================
+   Estilos Generales
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   Encabezado (Header)
+   ========================================== */
+header {
+    background-color: var(--color-surface);
+    border-bottom: 3px solid var(--color-accent);
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: var(--color-text);
+    letter-spacing: 1px;
+}
+
+header .subtitle {
+    font-size: 1rem;
+    color: #d1cbc4;
+    margin-top: 0.3rem;
+}
+
+/* ==========================================
+   Contenido Principal y Tarjetas (Cards)
+   ========================================== */
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================
+   Imágenes
+   ========================================== */
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid var(--color-primary);
+}
+
+/* ==========================================
+   Listas y Enlaces
+   ========================================== */
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+ul li::marker {
+    color: var(--color-accent);
+}
+
+.links-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.links-list a {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.links-list a:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   Pie de página (Footer)
+   ========================================== */
+footer {
+    background-color: var(--color-bg-dark);
+    border-top: 1px solid var(--color-primary);
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 0.9rem;
+    color: #aba49c;
+}
